@@ -5,8 +5,8 @@ int main()
 {
     /*
     DigitalIn es una clase de MBED que en su constructor recibe una variable pin, la cual es un
-    tipo enumerativo PinName definida por STM 
-      
+    tipo enumerativo PinName definida por STM que apunta correctamente a las direcciones lógicas 
+    de los pines . Ésta llama a gpio_init_in, una función de MBED
     */
     DigitalIn gasDetector(D2);
     DigitalOut alarmLed(LED1);
