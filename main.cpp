@@ -6,11 +6,15 @@ int main()
     /*
     DigitalIn es una clase de MBED que en su constructor recibe una variable pin, la cual es un
     tipo enumerativo PinName definida por STM 
-      
     */
+
     DigitalIn gasDetector(D2);
     DigitalOut alarmLed(LED1);
 
+    /*
+    El método mode también esta definido en DigitalIn
+    Recibe un tipo enumerativo PinMode definido en PinNames.h definida por STM
+    */    
     gasDetector.mode(PullDown);
 
 
