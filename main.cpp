@@ -9,6 +9,9 @@ int main()
     de los pines. Ésta llama a gpio_init_in, una función de MBED.
     */
 
+    /*asd*/
+    /*das*/
+
     DigitalIn gasDetector(D2);
     DigitalOut alarmLed(LED1);
 
@@ -17,6 +20,7 @@ int main()
     Recibe un tipo enumerativo PinMode definido en PinNames.h definida por STM
     */    
     gasDetector.mode(PullDown);
+
 
 
     alarmLed = OFF;
