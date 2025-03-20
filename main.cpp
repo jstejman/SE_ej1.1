@@ -10,6 +10,9 @@ int main()
     la cual está descrita en gpio_object.h hecha por STM que contiene los registros in, set y clr, pin, gpio y llpin.
     */
 
+    /*asd*/
+    /*das*/
+
     DigitalIn gasDetector(D2);
     DigitalOut alarmLed(LED1);
 
