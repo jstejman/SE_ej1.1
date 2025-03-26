@@ -3,6 +3,8 @@
 
 int main()
 {
+    DigitalIn gasDetector(D2);
+    
     /*
     DigitalIn es una clase de MBED que en su constructor recibe una variable pin, la cual es un
     tipo enumerativo PinName definida por STM que apunta correctamente a las direcciones lógicas
@@ -10,18 +12,19 @@ int main()
     la cual está descrita en gpio_object.h hecha por STM que contiene los registros in, set y clr, pin, gpio y llpin.
     */
 
-    /*asd*/
-    /*das*/
 
-    DigitalIn gasDetector(D2);
     DigitalOut alarmLed(LED1);
-
     /*
-    El método mode también esta definido en DigitalIn
-    Recibe un tipo enumerativo PinMode definido en PinNames.h definida por STM
+    DigitalOut es una clase de MBED que en su constructor recibe una variable pin del tipo 
+    PinName. Esta llama a gpio_init_out, también función de MBED qué hace básicamente lo mismo
+    que gpio_init_in solo enviando hacia el pin recibido.
     */
     gasDetector.mode(PullDown);
-
+    /*
+    El método mode esta definido en el objeto gpio y recibe
+    un tipo enumerativo PinMode que le indica en qué modo está:
+    PullNone, PullUp, PullDown, OpenDrainPullUp, OpenDrainPullDown y OpenDrainNoPull
+    */
     alarmLed = OFF;
     printf("%s\n", "Hello World");
     while (true)
